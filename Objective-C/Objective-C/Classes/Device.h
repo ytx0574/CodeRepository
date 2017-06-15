@@ -71,7 +71,7 @@
 + (BOOL)isAppCracked;
 
 /**
- *  获取当前设备可用内存(单位：MB）    该函数在运行时会有变化，得到的是应用当前的可用内存；应用的实际运行内存不等于 availableMemory + usedMemory
+ *  获取当前设备可用内存(单位：MB）    该函数在运行时会有变化，得到的是应用当前的可用内存；应用的实际分配到的内存不等于 availableMemory + usedMemory
  *
  *  @return memory
  */
