@@ -1,15 +1,15 @@
 //
-//  NSObject+NSCoding.m
+//  NSObject+Coding.m
 //  Objective-C
 //
 //  Created by Johnson on 2017/5/26.
 //  Copyright © 2017年 Johnson. All rights reserved.
 //
 
-#import "NSObject+NSCoding.h"
+#import "NSObject+Coding.h"
 #import "NSObject+Runtime.h"
 
-@implementation NSObject (NSCoding)
+@implementation NSObject (Coding)
 
 #pragma Private Methods
 

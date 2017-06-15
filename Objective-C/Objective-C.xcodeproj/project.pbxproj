@@ -16,7 +16,7 @@
 		2C8812341ED81F8A00EDA4DC /* Objective_CTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8812331ED81F8A00EDA4DC /* Objective_CTests.m */; };
 		2C88123F1ED81F8A00EDA4DC /* Objective_CUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88123E1ED81F8A00EDA4DC /* Objective_CUITests.m */; };
 		2C8812531ED81FC000EDA4DC /* NSObject+Copying.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88124E1ED81FC000EDA4DC /* NSObject+Copying.m */; };
-		2C8812541ED81FC000EDA4DC /* NSObject+NSCoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8812501ED81FC000EDA4DC /* NSObject+NSCoding.m */; };
+		2C8812541ED81FC000EDA4DC /* NSObject+Coding.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8812501ED81FC000EDA4DC /* NSObject+Coding.m */; };
 		2C8812551ED81FC000EDA4DC /* NSObject+Runtime.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8812521ED81FC000EDA4DC /* NSObject+Runtime.m */; };
 		2C88125D1ED826B400EDA4DC /* Device.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88125C1ED826B400EDA4DC /* Device.m */; };
 		2C8812601ED82BEB00EDA4DC /* TestDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C88125F1ED82BEB00EDA4DC /* TestDevice.m */; };
@@ -58,8 +58,8 @@
 		2C8812401ED81F8A00EDA4DC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C88124D1ED81FC000EDA4DC /* NSObject+Copying.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Copying.h"; sourceTree = "<group>"; };
 		2C88124E1ED81FC000EDA4DC /* NSObject+Copying.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Copying.m"; sourceTree = "<group>"; };
-		2C88124F1ED81FC000EDA4DC /* NSObject+NSCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NSCoding.h"; sourceTree = "<group>"; };
-		2C8812501ED81FC000EDA4DC /* NSObject+NSCoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NSCoding.m"; sourceTree = "<group>"; };
+		2C88124F1ED81FC000EDA4DC /* NSObject+Coding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Coding.h"; sourceTree = "<group>"; };
+		2C8812501ED81FC000EDA4DC /* NSObject+Coding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Coding.m"; sourceTree = "<group>"; };
 		2C8812511ED81FC000EDA4DC /* NSObject+Runtime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Runtime.h"; sourceTree = "<group>"; };
 		2C8812521ED81FC000EDA4DC /* NSObject+Runtime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Runtime.m"; sourceTree = "<group>"; };
 		2C88125B1ED826B400EDA4DC /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
@@ -163,8 +163,8 @@
 			children = (
 				2C88124D1ED81FC000EDA4DC /* NSObject+Copying.h */,
 				2C88124E1ED81FC000EDA4DC /* NSObject+Copying.m */,
-				2C88124F1ED81FC000EDA4DC /* NSObject+NSCoding.h */,
-				2C8812501ED81FC000EDA4DC /* NSObject+NSCoding.m */,
+				2C88124F1ED81FC000EDA4DC /* NSObject+Coding.h */,
+				2C8812501ED81FC000EDA4DC /* NSObject+Coding.m */,
 				2C8812511ED81FC000EDA4DC /* NSObject+Runtime.h */,
 				2C8812521ED81FC000EDA4DC /* NSObject+Runtime.m */,
 			);
@@ -328,7 +328,7 @@
 				2C88125D1ED826B400EDA4DC /* Device.m in Sources */,
 				2C8812551ED81FC000EDA4DC /* NSObject+Runtime.m in Sources */,
 				2C88121E1ED81F8A00EDA4DC /* AppDelegate.m in Sources */,
-				2C8812541ED81FC000EDA4DC /* NSObject+NSCoding.m in Sources */,
+				2C8812541ED81FC000EDA4DC /* NSObject+Coding.m in Sources */,
 				2C88121B1ED81F8A00EDA4DC /* main.m in Sources */,
 				2C8812601ED82BEB00EDA4DC /* TestDevice.m in Sources */,
 			);

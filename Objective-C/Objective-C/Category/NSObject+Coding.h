@@ -1,5 +1,5 @@
 //
-//  NSObject+NSCoding.h
+//  NSObject+Coding.h
 //  Objective-C
 //
 //  Created by Johnson on 2017/5/26.
@@ -12,6 +12,6 @@
  *  如NSArray NSDictionary等自实现了coding, 而且优先级比这个方法高, 不用担心出问题
  */
 
-@interface NSObject (NSCoding)
+@interface NSObject (Coding)
 
 @end
