@@ -28,6 +28,8 @@
     if (!strcmp(cString, @encode(Class))) return @"class";
     if (!strcmp(cString, @encode(SEL))) return @"SEL";
     if (!strcmp(cString, @encode(unsigned int))) return @"unsigned int";
+    if (!strcmp(cString, @encode(unsigned long))) return @"unsigned long";
+
     NSString *result = [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
     if ([[result substringToIndex:1] isEqualToString:@"@"] && [result rangeOfString:@"?"].location == NSNotFound) {
         result = [[result substringWithRange:NSMakeRange(2, result.length - 3)] stringByAppendingString:@"*"];
