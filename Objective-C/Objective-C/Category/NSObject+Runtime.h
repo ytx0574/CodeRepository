@@ -48,5 +48,43 @@
  */
 - (NSArray *)enumeratePropertiesWithBlock:(void(^)(NSUInteger idx, NSString *property, BOOL *stop))block;
 
+/**
+ *  获取当前所有子类
+ *
+ *  @return return value description
+ */
++ (NSArray *)runtimeSubClasses;
+- (NSArray *)runtimeSubClasses;
 
+/**
+ *  获取父类
+ *
+ *  @return <#return value description#>
+ */
++ (NSString *)runtimeParentClassHierarchy;
+- (NSString *)runtimeParentClassHierarchy;
+
+/**
+ *  获取当前类的类方法
+ *
+ *  @return <#return value description#>
+ */
++ (NSArray *)runtimeClassMethods;
+- (NSArray *)runtimeClassMethods;
+
+/**
+ *  获取当前类的实例方法
+ *
+ *  @return <#return value description#>
+ */
++ (NSArray *)runtimeInstanceMethods;
+- (NSArray *)runtimeInstanceMethods;
+
+/**
+ *  获取当前类实现的所有协议
+ *
+ *  @return <#return value description#>
+ */
++ (NSArray *)runtimeProtocols;
+- (NSArray *)runtimeProtocols;
 @end
