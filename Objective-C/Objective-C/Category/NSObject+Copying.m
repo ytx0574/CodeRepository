@@ -19,7 +19,7 @@
     
     void (^cycleBlock)(Class class) = ^(Class class){
         
-        [NSObject enumerateIvarsFromClass:class block:^(NSUInteger idx, NSString *ivar) {
+        [NSObject enumerateIvarsFromClass:class block:^BOOL(NSUInteger idx, NSString *ivar) {
             
             Ivar ivar_instance = class_getInstanceVariable([instance class], [ivar UTF8String]);
             Ivar ivar_self = class_getInstanceVariable(class, [ivar UTF8String]);
@@ -36,7 +36,7 @@
                 flag ? [self setValue:[instance valueForKey:ivar] forKey:ivar] : nil;
                 
             }
-            
+            return NO;
         }];
         
     };

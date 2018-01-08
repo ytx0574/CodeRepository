@@ -27,9 +27,11 @@
     if (!strcmp(cString, @encode(double))) return @"double";
     if (!strcmp(cString, @encode(Class))) return @"class";
     if (!strcmp(cString, @encode(SEL))) return @"SEL";
-    if (!strcmp(cString, @encode(unsigned int))) return @"unsigned int";
+    
     if (!strcmp(cString, @encode(unsigned long))) return @"unsigned long";
-
+    if (!strcmp(cString, @encode(unsigned int))) return @"unsigned int";
+    
+    
     NSString *result = [NSString stringWithCString:cString encoding:NSUTF8StringEncoding];
     if ([[result substringToIndex:1] isEqualToString:@"@"] && [result rangeOfString:@"?"].location == NSNotFound) {
         result = [[result substringWithRange:NSMakeRange(2, result.length - 3)] stringByAppendingString:@"*"];
@@ -45,7 +47,7 @@
 
 @implementation NSObject (Runtime)
 
-+ (NSArray *)enumerateIvarsFromClass:(Class)class block:(void(^)(NSUInteger idx, NSString *ivar))block;
++ (NSArray *)enumerateIvarsFromClass:(Class)class block:(BOOL(^)(NSUInteger idx, NSString *ivar))block;
 {
     unsigned int outCount;
     
@@ -59,20 +61,20 @@
         
         [ay addObject:ivar];
         
-        block ? block(i, ivar) : nil;
-        
+        BOOL flag = block ? block(i, ivar) : NO;
+        if (flag) { break; }
     }
     
     return ay;
 }
 
-+ (NSArray *)enumeratePropertiesFromClass:(Class)class block:(void(^)(NSUInteger idx, NSString *property))block;
++ (NSArray *)enumeratePropertiesFromClass:(Class)class block:(BOOL(^)(NSUInteger idx, NSString *property))block;
 {
     unsigned int outCount;
     
     NSMutableArray *ay = [NSMutableArray array];
     
-    objc_property_t *properties = class_copyPropertyList([self class], &outCount);
+    objc_property_t *properties = class_copyPropertyList(class, &outCount);
     
     for (int i = 0; i < outCount; i++) {
         
@@ -80,7 +82,8 @@
         
         [ay addObject:property];
         
-        block ? block(i, property) : nil;
+        BOOL flag = block ? block(i, property) : NO;
+        if (flag) { break; }
     }
     
     return ay;
@@ -92,10 +95,11 @@
 {
     __block BOOL stop = NO;
     
-    return [NSObject enumerateIvarsFromClass:[self class] block:^(NSUInteger idx, NSString *ivar) {
+    return [NSObject enumerateIvarsFromClass:[self class] block:^BOOL(NSUInteger idx, NSString *ivar) {
         
         if (!stop) {block ? block(idx, ivar, &stop) : nil;}
         
+        return stop;
     }];
     
 }
@@ -104,8 +108,11 @@
 {
     __block BOOL stop = NO;
     
-    return [NSObject enumeratePropertiesFromClass:[self class] block:^(NSUInteger idx, NSString *property) {
+    return [NSObject enumeratePropertiesFromClass:[self class] block:^BOOL(NSUInteger idx, NSString *property) {
+        
         if (!stop) {block ? block(idx, property, &stop) : nil;}
+        
+        return stop;
     }];
     
 }
@@ -250,3 +257,4 @@ static void getSuper(Class class, NSMutableString *result)
     return result.count ? [result copy] : nil;
 }
 @end
+
