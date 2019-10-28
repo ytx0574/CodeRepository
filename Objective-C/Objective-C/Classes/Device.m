@@ -92,6 +92,18 @@
     if ([platform isEqualToString:@"iPad7,2"])           return @"iPad Pro (12.9-inch, 2nd generation) (A1671/A1821)";
     if ([platform isEqualToString:@"iPad7,3"])           return @"iPad Pro (10.5-inch) (A1701)";
     if ([platform isEqualToString:@"iPad7,4"])           return @"iPad Pro (10.5-inch) (A1709)";
+    if ([platform isEqualToString:@"iPad7,5"])           return @"iPad (6th generation) (A1893)";
+    if ([platform isEqualToString:@"iPad7,6"])           return @"iPad (6th generation) (A1954)";
+    if ([platform isEqualToString:@"iPad8,1"])           return @"iPad Pro (11-inch) (A1980)";
+    if ([platform isEqualToString:@"iPad8,2"])           return @"iPad Pro (11-inch) (A1980)";
+    if ([platform isEqualToString:@"iPad8,3"])           return @"iPad Pro (11-inch) (A1934/A1979/A2013)";
+    if ([platform isEqualToString:@"iPad8,4"])           return @"iPad Pro (11-inch) (A1934/A1979/A2013)";
+    if ([platform isEqualToString:@"iPad8,5"])           return @"iPad Pro (12.9-inch) (3rd generation) (A1876)";
+    if ([platform isEqualToString:@"iPad8,6"])           return @"iPad Pro (12.9-inch) (3rd generation) (A1876)";
+    if ([platform isEqualToString:@"iPad8,7"])           return @"iPad Pro (12.9-inch) (3rd generation) (A1895/A1983/A2014)";
+    if ([platform isEqualToString:@"iPad8,8"])           return @"iPad Pro (12.9-inch) (3rd generation) (A1895/A1983/A2014)";
+    if ([platform isEqualToString:@"iPad11,3"])          return @"iPad Air (3rd generation) (A2152)";
+    if ([platform isEqualToString:@"iPad11,4"])          return @"iPad Air (3rd generation) (A2123/A2153//A2154)";
     
     if ([platform isEqualToString:@"iPad2,5"])           return @"iPad Mini 1G (A1432)";
     if ([platform isEqualToString:@"iPad2,6"])           return @"iPad Mini 1G (A1454)";
@@ -104,6 +116,8 @@
     if ([platform isEqualToString:@"iPad4,9"])           return @"iPad Mini3 (A1601)";
     if ([platform isEqualToString:@"iPad5,1"])           return @"iPad Mini4 (A1538)";
     if ([platform isEqualToString:@"iPad5,2"])           return @"iPad Mini4 (A1550)";
+    if ([platform isEqualToString:@"iPad11,1"])          return @"iPad mini (5th generation) (A2133";
+    if ([platform isEqualToString:@"iPad11,2"])          return @"iPad mini (5th generation) (A2124/A2125/A2126)";
     
     if ([platform isEqualToString:@"iPhone1,1"])         return @"iPhone 2G (A1203)";
     if ([platform isEqualToString:@"iPhone1,2"])         return @"iPhone 3G (A1241/A1324)";
@@ -133,6 +147,9 @@
     if ([platform isEqualToString:@"iPhone10,5"])        return @"iPhone 8 Plus(A1897)";
     if ([platform isEqualToString:@"iPhone10,3"])        return @"iPhone X (A1865/A1902)";
     if ([platform isEqualToString:@"iPhone10,6"])        return @"iPhone X (A1901)";
+    if ([platform isEqualToString:@"iPhone11,8"])        return @"iPhone XR (A1984/A2105/A2106/A2108)";
+    if ([platform isEqualToString:@"iPhone11,2"])        return @"iPhone XS (A1920/A2097/A2098/A2100)";
+    if ([platform isEqualToString:@"iPhone11,4"])        return @"iPhone XS Max (A1921/A2101/A2102/A2104)";
     
     if ([platform isEqualToString:@"iPod1,1"])           return @"iPod Touch 1G (A1213)";
     if ([platform isEqualToString:@"iPod2,1"])           return @"iPod touch (2th generation) (A1288/A1319)";
@@ -140,9 +157,10 @@
     if ([platform isEqualToString:@"iPod4,1"])           return @"iPod touch (4th generation) (A1367)";
     if ([platform isEqualToString:@"iPod5,1"])           return @"iPod touch (5th generation) (A1421/A1509)";
     if ([platform isEqualToString:@"iPod7,1"])           return @"iPod touch (6th generation) (A1574)";
+    if ([platform isEqualToString:@"iPod9,1"])           return @"iPod touch (7th generation) (A2178)";
     
-    if ([platform isEqualToString:@"i386"])              return @"iPhone Simulator";
-    if ([platform isEqualToString:@"x86_64"])            return @"iPhone Simulator";
+    if ([platform isEqualToString:@"i386"])              return @"iPhone Simulator x32";
+    if ([platform isEqualToString:@"x86_64"])            return @"iPhone Simulator x64";
     
     return platform;
 }
